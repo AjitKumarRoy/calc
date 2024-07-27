@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="parent">
+		<h1>CALCULATOR</h1>
+		<div id="logger" class="child calculation"></div>
+		<div class="child first-child">
+			<button class="btn btn-num" onclick="
+					appendToCalculation('1');
+				">1</button>
+			<button class="btn btn-num" onclick="
+					appendToCalculation('2');
+			">2</button>
+			<button class="btn btn-num" onclick="
+					appendToCalculation('3');
+			">3</button>
+			<button class="btn btn-extra" onclick="
+					appendToCalculation(' + ');
+			">+</button>
+		</div>
+		<div class="child">
+			<button class="btn btn-num" onclick="
+					appendToCalculation('4');
+				">4</button>
+			<button class="btn btn-num" onclick="
+					appendToCalculation('5');
+			">5</button>
+			<button class="btn btn-num" onclick="
+					appendToCalculation('6');
+			">6</button>
+			<button class="btn btn-extra" onclick="
+					appendToCalculation(' - ');
+			">-</button>
+		</div>
+		<div class="child">
+			<button class="btn btn-num" onclick="
+					appendToCalculation('7');
+				">7</button>
+			<button class="btn btn-num" onclick="
+					appendToCalculation('8');
+			">8</button>
+			<button class="btn btn-num" onclick="
+					appendToCalculation('9');
+			">9</button>
+			<button class="btn btn-extra" onclick="
+					appendToCalculation(' * ');
+			">x</button>
+		</div>
+		<div class="child">
+			<button class="btn btn-num" onclick="
+					appendToCalculation('0');
+				">0</button>
+			<button class="btn btn-extra" onclick="
+					appendToCalculation('.');
+			">.</button>
+			<button class="btn btn-extra" onclick="
+					if (calculation === '') {
+						calculation = '';
+					} else {
+						evaluateCalculation();
+					}
+			">=</button>
+			<button class="btn btn-extra" onclick="
+					appendToCalculation(' / ');
+			">/</button>
+		</div>
+		<div class="child last-child">
+			<button class="btn clear" onclick="
+					clearCalculation();
+				">Clear</button>
+		</div>
+	</div>
+
+
+	<script src="main.js"></script>
+</body>
+
+</html>
